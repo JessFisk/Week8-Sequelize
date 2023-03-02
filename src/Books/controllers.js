@@ -17,7 +17,7 @@ const addBook = async (req, res) => {
         // res.status (201).json({})
         res.status(201).json({message:"success", newBook:book});
     }
-
+ 
     catch (error){
     console.log(error);
     // const errorResponse = {
@@ -64,7 +64,7 @@ res.status(501).json({errorMessage: error.message, error: error});
 const deleteBook = async (req, res) => {
     try{
         const deleteBook = await Book.destroy ({where: { title:req.body.title}});
-        res.status(201).json({message:"successfully deleted", book: deleteBook});
+        res.status(201).json({message:"successfully deleted", result: deleteBook});
     }
     catch(error){
         res.status(501).json({errorMessage: error.message, error: error});
@@ -74,7 +74,7 @@ const deleteBook = async (req, res) => {
 const deleteAllBooks = async (req, res) => {
     try{
         const deleteAllBook = await Book.destroy ({truncate: true});
-        res.status(202).json({message:"successfully deleted", book: deleteAllBook});
+        res.status(202).json({message:"successfully deleted", result: deleteAllBook});
     }
     catch(error){
         res.status(501).json({errorMessage: error.message, error: error});
