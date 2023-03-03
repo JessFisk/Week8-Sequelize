@@ -11,7 +11,11 @@ const addAuthor = async (req, res) => {
     res.status(501).json({errorMessage:error.message, error: error});
     }
 }
-////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+// {
+//     "authorName":"craig"
+//   }
+///////////////////////////////////////////////////////
 const getAuthorAndBooks = async (req, res) => {
     try{
         const author = await Author.findOne ({
