@@ -6,10 +6,10 @@ const {addBook, getAllBooks, getSingleBookByTitle, deleteBook, deleteAllBooks, u
 
 bookRouter.post("/books/addbook", addBook);
 bookRouter.get("/books/getallbooks", getAllBooks);
-bookRouter.get("/books/getbook/:title", getSingleBookByTitle)
-bookRouter.delete("/books/deletebook", deleteBook)
-bookRouter.delete("/books/deleteallBooks", deleteAllBooks)
-bookRouter.put("/books/updatebook", updateBook)
+bookRouter.get("/books/getbook/:title", getSingleBookByTitle);
+bookRouter.delete("/books/deletebook", deleteBook);
+bookRouter.delete("/books/deleteallBooks", deleteAllBooks);
+bookRouter.put("/books/updatebook", updateBook);
 
 
 module.exports = bookRouter;
