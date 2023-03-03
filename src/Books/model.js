@@ -14,7 +14,4 @@ const Book = connections.define("Book", {
         type:DataTypes.STRING,
     },
 })
-
-
-
 module.exports = Book;
