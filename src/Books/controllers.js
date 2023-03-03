@@ -33,6 +33,14 @@ const addBook = async (req, res) => {
 //     "author": "author1",
 //     "genre": "genre1"
 //  }
+
+// {
+//     "title": "title57",
+//     "author": "bob",
+//     "genre": "childrens",
+//     "AuthorId": 2,
+//     "GenreId": 2
+//   }
 /////////////////////////////////////////////////////
 const getAllBooks = async (req, res) =>{
     try{
