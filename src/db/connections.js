@@ -1,6 +1,7 @@
 const {Sequelize} = require ("sequelize");
 
-const connections = new Sequelize (process.env.MYSQL_URI);
+const connections = new Sequelize (process.env.MYSQL_URI, {
+    retry: {match: [/Deadlock/i], max:3 }});
 
 connections.authenticate()
 
